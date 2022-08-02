@@ -1,0 +1,67 @@
+[
+  {
+    "name":"Apple",
+    "type":"Fruit",
+    "price":0.5
+  }, 
+  {
+    "name":"Banana",
+    "type":"Fruit",
+    "price":1.0
+  }, 
+  {
+    "name":"Bread",
+    "type":"Grains",
+    "price":1.50
+  },
+  {
+    "name":"Beer",
+    "type":"Alcohol",
+    "price":5.00
+  },
+  {
+    "name":"Chocolate",
+    "type":"Confectionary",
+    "price":2.00
+  },
+  {
+    "name":"Cream",
+    "type":"Dairy",
+    "price":1.50
+  },
+  {
+    "name":"Deluxe dessert for 2",
+    "type":"Dessert",
+    "price":3.50
+  },
+  {
+    "name":"Deluxe meal for 2",
+    "type":"Ready meal",
+    "price":6.00
+  },
+  {
+    "name":"Microwave curry",
+    "type":"Ready meal",
+    "price":1.50
+  },
+  {
+    "name":"Milk",
+    "type":"Dairy",
+    "price":1.00
+  },
+  {
+    "name":"Strawberries",
+    "type":"Fruit",
+    "price":2.00
+  },
+  {
+    "name":"Sweets",
+    "type":"Confectionary",
+    "price":1.75
+  },
+  {
+    "name":"Wine",
+    "type":"Alcohol",
+    "price":8.00
+  }
+]

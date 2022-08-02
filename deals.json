@@ -1,0 +1,79 @@
+[
+    { 
+        "product":"Banana",
+         "buyProduct":"Apple",
+         "buyType": null,
+         "quantity": 2,
+         "dealPrice": 0.75
+    },
+    { 
+        "product":"Bread",
+         "buyProduct":null,
+         "buyType": "Fruit",
+         "quantity": 3,
+         "dealPrice": 1.00
+    },
+    { 
+        "product":"Beer",
+         "buyProduct":null,
+         "buyType": "Ready meal",
+         "quantity": 1,
+         "dealPrice": 3.00
+    },
+    { 
+        "product":"Chocolate",
+         "buyProduct":"Chocolate",
+         "buyType": null,
+         "quantity": 2,
+         "dealPrice": 1.50
+    },
+    { 
+        "product":"Cream",
+         "buyProduct":"Strawberries",
+         "buyType": null,
+         "quantity": 2,
+         "dealPrice": 0.75
+    },
+    { 
+        "product":"Deluxe dessert for 2",
+         "buyProduct":["Deluxe meal for 2","Wine"],
+         "buyType": null,
+         "quantity": 1,
+         "dealPrice": 3.00
+    },
+    { 
+        "product":"Deluxe meal for 2",
+         "buyProduct":["Deluxe dessert for 2","Wine"],
+         "buyType": null,
+         "quantity": 1,
+         "dealPrice": 5.00
+    },
+    { 
+        "product":"Microwave curry",
+         "buyProduct":"Beer",
+         "buyType": null,
+         "quantity": 1,
+         "dealPrice": 1.00
+    },
+    { 
+        "product":"Strawberries",
+         "buyProduct":null,
+         "buyType": "Dairy",
+         "quantity": 1,
+         "dealPrice": 1.50
+    },
+    { 
+        "product":"Sweets",
+         "buyProduct":null,
+         "buyType": "Sweets",
+         "quantity": 2,
+         "dealPrice": 1.75
+    },
+    { 
+        "product":"Wine",
+        "buyProduct":["Deluxe dessert for 2","Deluxe meal for 2"],
+         "buyType": null,
+         "quantity": 1,
+         "dealPrice": 5.00
+    }
+]
