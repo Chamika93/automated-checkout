@@ -1,14 +1,14 @@
 [
     {
-    "product":"Apple",
+    "name":"Apple",
     "quantity":2
     },
     {
-     "product": "Banana",
+     "name": "Banana",
      "quantity":1
     }, 
     {
-     "product":"Bread",
+     "name":"Bread",
      "quantity":1
     }
 ]
