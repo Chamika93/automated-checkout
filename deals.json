@@ -1,77 +1,79 @@
 [
     { 
-        "product":"Banana",
-         "buyProduct":"Apple",
+        "product":"banana",
+         "buyProduct":["apple"],
          "buyType": null,
          "quantity": 2,
          "dealPrice": 0.75
     },
     { 
-        "product":"Bread",
+        "product":"bread",
          "buyProduct":null,
-         "buyType": "Fruit",
+         "buyType": "fruit",
          "quantity": 3,
          "dealPrice": 1.00
     },
     { 
-        "product":"Beer",
+        "product":"beer",
          "buyProduct":null,
-         "buyType": "Ready meal",
+         "buyType": "ready_meal",
          "quantity": 1,
          "dealPrice": 3.00
     },
     { 
-        "product":"Chocolate",
-         "buyProduct":"Chocolate",
+         "product":"chocolate",
+         "isSameProduct": true,
+         "buyProduct":["chocolate"],
          "buyType": null,
-         "quantity": 2,
+         "quantity": 3,
          "dealPrice": 1.50
     },
     { 
-        "product":"Cream",
-         "buyProduct":"Strawberries",
+        "product":"cream",
+         "buyProduct":["strawberries"],
          "buyType": null,
          "quantity": 2,
          "dealPrice": 0.75
     },
     { 
-        "product":"Deluxe dessert for 2",
-         "buyProduct":["Deluxe meal for 2","Wine"],
+        "product":"deluxe_dessert_for_2",
+         "buyProduct":["deluxe_meal_for_2","wine"],
          "buyType": null,
          "quantity": 1,
          "dealPrice": 3.00
     },
     { 
-        "product":"Deluxe meal for 2",
-         "buyProduct":["Deluxe dessert for 2","Wine"],
+        "product":"deluxe_meal_for_2",
+         "buyProduct":["deluxe_dessert_for_2","wine"],
          "buyType": null,
          "quantity": 1,
          "dealPrice": 5.00
     },
     { 
-        "product":"Microwave curry",
-         "buyProduct":"Beer",
+        "product":"microwave_curry",
+         "buyProduct":["beer"],
          "buyType": null,
          "quantity": 1,
          "dealPrice": 1.00
     },
     { 
-        "product":"Strawberries",
+        "product":"strawberries",
          "buyProduct":null,
-         "buyType": "Dairy",
+         "buyType": "dairy",
          "quantity": 1,
          "dealPrice": 1.50
     },
     { 
-        "product":"Sweets",
-         "buyProduct":null,
-         "buyType": "Sweets",
+        "product":"sweets",
+        "isSameProduct": true,
+         "buyProduct":["sweets"],
+         "buyType": null,
          "quantity": 2,
-         "dealPrice": 1.75
+         "dealPrice": 1
     },
     { 
-        "product":"Wine",
-        "buyProduct":["Deluxe dessert for 2","Deluxe meal for 2"],
+        "product":"wine",
+        "buyProduct":["deluxe_dessert_for_2","deluxe_meal_for_2"],
          "buyType": null,
          "quantity": 1,
          "dealPrice": 5.00

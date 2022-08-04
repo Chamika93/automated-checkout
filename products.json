@@ -1,67 +1,67 @@
 [
   {
-    "name":"Apple",
-    "type":"Fruit",
+    "name":"apple",
+    "type":"fruit",
     "price":0.5
   }, 
   {
-    "name":"Banana",
-    "type":"Fruit",
+    "name":"banana",
+    "type":"fruit",
     "price":1.0
   }, 
   {
-    "name":"Bread",
-    "type":"Grains",
+    "name":"bread",
+    "type":"grains",
     "price":1.50
   },
   {
-    "name":"Beer",
-    "type":"Alcohol",
+    "name":"beer",
+    "type":"alcohol",
     "price":5.00
   },
   {
-    "name":"Chocolate",
-    "type":"Confectionary",
+    "name":"chocolate",
+    "type":"confectionary",
     "price":2.00
   },
   {
-    "name":"Cream",
-    "type":"Dairy",
+    "name":"cream",
+    "type":"dairy",
     "price":1.50
   },
   {
-    "name":"Deluxe dessert for 2",
-    "type":"Dessert",
+    "name":"deluxe_dessert_for_2",
+    "type":"dessert",
     "price":3.50
   },
   {
-    "name":"Deluxe meal for 2",
-    "type":"Ready meal",
+    "name":"deluxe_meal_for_2",
+    "type":"ready meal",
     "price":6.00
   },
   {
-    "name":"Microwave curry",
-    "type":"Ready meal",
+    "name":"microwave_curry",
+    "type":"ready_meal",
     "price":1.50
   },
   {
-    "name":"Milk",
-    "type":"Dairy",
+    "name":"milk",
+    "type":"dairy",
     "price":1.00
   },
   {
-    "name":"Strawberries",
-    "type":"Fruit",
+    "name":"strawberries",
+    "type":"fruit",
     "price":2.00
   },
   {
-    "name":"Sweets",
-    "type":"Confectionary",
+    "name":"sweets",
+    "type":"confectionary",
     "price":1.75
   },
   {
-    "name":"Wine",
-    "type":"Alcohol",
+    "name":"wine",
+    "type":"alcohol",
     "price":8.00
   }
 ]

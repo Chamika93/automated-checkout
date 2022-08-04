@@ -1,38 +1,55 @@
 const { getType } = require('./productHelpers');
 const { getOrderItem } = require('./orderHelper');
 
-// there are 2 types of deals
-// product deal - deal apllies if you buy one or more item of a certain product
-//                ex: Banana, Fruit, £1.00, £0.75 if you buy 2 apples
+
+
+const getProductDeal = (deals, item) => deals.find(({product}) => product===item );
+
+// product deal - deal apllies if you buy one or more item of a certain product or prodcuts
+//                ex: Banana - £0.75 if you buy 2 apples
+//                    Deluxe dessert for 2 - £3.00 if you buy wine and a deluxe meal for 2
+
+const getNumOfProductDeal = (deal, order) => {
+    if(deal.isSameProduct) {
+        const orderItem = getOrderItem(order, deal.product);
+        return orderItem.quantity < deal.quantity ? 0 : orderItem.quantity;
+    }
+
+    const hasProductDeal = deal.buyProduct.every((item) => {
+        const requiredOrderItem = getOrderItem(order, item);
+        if(!requiredOrderItem || requiredOrderItem.quantity < deal.quantity) {
+            return false;
+        }
+        return true;
+    
+    });
+    if(!hasProductDeal) {
+        return 0;
+    }
+    return Math.min(...deal.buyProduct.map((item) => getOrderItem(order, item).quantity / deal.quantity));
+}
 
 // Type deal - deal apllies if you buy one or more item of a certain product type
-//                ex: Strawberries, Fruit, £2.00, £1.50 if you buy any type of Dairy
+//                ex: Strawberries £1.50 if you buy any type of Dairy
 
-const hasProductDeal = (deal, order) => {
-    if(typeof deal.buyProduct === "string" ) {
-        return getOrderItem(order, deal.buyProduct)?.quantity === deal.quantity;
-    }
-    return deal.buyProduct.every((item) => !!getOrderItem(order, item));
+const getNumOfTypeDeal = ( deal, order, products) => {
+    const totalItemsofType =  order
+                                .filter(({name}) => getType(products, name)===deal.buyType)
+                                .map(({quantity}) => quantity)
+                                .reduce((a, b) => a + b, 0);
+    
+    return totalItemsofType / deal.quantity;
 }
 
-const hasTypeDeal = (products, deal, order) => {
-    return order.
-        filter(({name}) => getType(products, name)===deal.buyType)
-        .map(({quantity}) => quantity)
-        .reduce((a, b) => a + b, 0) === deal.quantity;
-}
-
-const isEligibleForDeal = (products, deal, order) => {
+const getNumOfDealsEligible = (products, deal, order) => {
     if(deal.buyProduct) {
-        return hasProductDeal(deal, order)
+        return Math.floor(getNumOfProductDeal(deal, order))
     }
 
-    return hasTypeDeal(products, deal, order)
+    return Math.floor(getNumOfTypeDeal(deal, order, products))
 }
-
-const getItemDeal = (deals, item) => deals.find(({product}) => product===item );
 
 module.exports = {
-    isEligibleForDeal,
-    getItemDeal,
+    getNumOfDealsEligible,
+    getProductDeal,
 }

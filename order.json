@@ -1,14 +1,13 @@
-[
-    {
-    "name":"Apple",
-    "quantity":2
-    },
-    {
-     "name": "Banana",
-     "quantity":1
-    }, 
-    {
-     "name":"Bread",
-     "quantity":1
-    }
+[  {
+    "name": "banana",
+    "quantity": 1
+   },
+  {
+    "name": "apple",
+    "quantity": 2
+  },
+  {
+    "name": "sweets",
+    "quantity": 2
+  }
 ]
