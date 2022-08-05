@@ -31,10 +31,11 @@ for (let i = 0; i < orders.length; i++) {
     const orderPrices = getOrderPrices(modifiedOrder);
 
     console.log('------------- Your Receipt --------------')
-    for (let i = 0; i < order.length; i++) {
-        console.log(`${order[i].name}           £${orderPrices[i]}`)
+    for (let i = 0; i < modifiedOrder.length; i++) {
+        console.log(`${modifiedOrder[i].name}           £${orderPrices[i][0]}`)
     }
     console.log('------------------');
-    console.log(`Total          £${orderPrices.reduce((a, b) => a + b, 0)}`);
+    console.log(`Total          £${orderPrices.reduce((a, b) => a + b[0], 0)}`);
+    console.log(`Saved          £${orderPrices.reduce((a, b) => a + b[1], 0)}`);
     console.log(`\n`);
 }

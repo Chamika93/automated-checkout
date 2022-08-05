@@ -45,7 +45,7 @@ const getNumOfDealsEligible = (products, deal, order) => {
     if(deal.buyProduct) {
         return Math.floor(getNumOfProductDeal(deal, order))
     }
-
+    
     return Math.floor(getNumOfTypeDeal(deal, order, products))
 }
 

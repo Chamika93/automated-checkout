@@ -1,5 +1,6 @@
 const { getNumOfDealsEligible }  = require('./helpers/dealHelpers');
 
+// return [orderPrice, saved value] array for each item
 const products = require('./products.json');
 
 const getOrderPrices = modifiedOrder => {
@@ -8,15 +9,15 @@ const getOrderPrices = modifiedOrder => {
         const productPrice =  product.price;
     
         const numOfDealsEligible = deal && getNumOfDealsEligible(products, deal, modifiedOrder);
-        
+     
         if(Boolean(numOfDealsEligible)) {
-            return numOfDealsEligible < orderQuantity ? 
-                ( deal.dealPrice * numOfDealsEligible ) + ( productPrice * (orderQuantity - numOfDealsEligible ))
-                : deal.dealPrice * orderQuantity;
+            return numOfDealsEligible > orderQuantity ? 
+                [deal.dealPrice * orderQuantity,( productPrice - deal.dealPrice ) * orderQuantity ]
+                :  [( deal.dealPrice * numOfDealsEligible ) + ( productPrice * (orderQuantity - numOfDealsEligible )), ( ( productPrice - deal.dealPrice ) * numOfDealsEligible )  ]
                                             
         }
     
-        return productPrice * orderQuantity;
+        return [productPrice * orderQuantity, 0];
     });
 }
 
