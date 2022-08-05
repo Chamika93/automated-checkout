@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "orders": [
+      {
+        "name": "apple",
+        "quantity": 2
+      },
+      {
+        "name": "banana",
+        "quantity": 1
+      },
+      {
+        "name": "bread",
+        "quantity": 1
+      }
+    ],
+    "receipt": "INDIVIDUAL_ASCENDING"
+  },
+  {
+    "id": 2,
+    "orders": [
+      {
+        "name": "apple",
+        "quantity": 7
+      },
+      {
+        "name": "banana",
+        "quantity": 3
+      },
+      {
+        "name": "bread",
+        "quantity": 2
+      },
+      {
+        "name": "beer",
+        "quantity": 1
+      },
+      {
+        "name": "sweets",
+        "quantity": 4
+      }
+    ],
+    "receipt": "DEAL_ASCENDING"
+  },
+  {
+    "id": 3,
+    "orders": [
+      {
+        "name": "deluxe_dessert_for_2",
+        "quantity": 2
+      },
+      {
+        "name": "deluxe_meal_for_2",
+        "quantity": 1
+      },
+      {
+        "name": "wine",
+        "quantity": 2
+      }
+    ],
+    "receipt": "ALPHABETICAL_ASCENDING"
+  },
+  {
+    "id": 4,
+    "orders": [
+      {
+        "name": "apple",
+        "quantity": 1
+      },
+      {
+        "name": "beer",
+        "quantity": 28
+      },
+      {
+        "name": "microwave_curry",
+        "quantity": 7
+      }
+    ],
+    "receipt": "INDIVIDUAL_DESCENDING"
+  },
+  {
+    "id": 5,
+    "orders": [
+      {
+        "name": "apple",
+        "quantity": 17
+      },
+      {
+        "name": "banana",
+        "quantity": 21
+      },
+      {
+        "name": "cream",
+        "quantity": 2
+      },
+      {
+        "name": "strawberries",
+        "quantity": 12
+      }
+    ],
+    "receipt": "DEAL_DESCENDING"
+  },
+  {
+    "id": 6,
+    "orders": [
+      {
+        "name": "chocolate",
+        "quantity": 11
+      },
+      {
+        "name": "sweets",
+        "quantity": 22
+      }
+    ],
+    "receipt": "TYPE_ASCENDING"
+  },
+  {
+    "id": 7,
+    "orders": [
+      {
+        "name": "beer",
+        "quantity": 5
+      },
+      {
+        "name": "cream",
+        "quantity": 4
+      },
+      {
+        "name": "milk",
+        "quantity": 3
+      },
+      {
+        "name": "wine",
+        "quantity": 2
+      }
+    ],
+    "receipt": "ALPHABETICAL_DESCENDING"
+  },
+  {
+    "id": 8,
+    "orders": [
+      {
+        "name": "beer",
+        "quantity": 1
+      },
+      {
+        "name": "vodka",
+        "quantity": 1
+      },
+      {
+        "name": "whisky",
+        "quantity": 1
+      },
+      {
+        "name": "wine",
+        "quantity": 1
+      }
+    ],
+    "receipt": "DEAL_ASCENDING"
+  },
+  {
+    "id": 9,
+    "orders": [
+      {
+        "name": "beer",
+        "quantity": 2
+      },
+      {
+        "name": "wine",
+        "quantity": 2
+      }
+    ],
+    "receipt": "ALCOHOL_ASCENDING"
+  },
+  {
+    "id": 10,
+    "orders": [
+      {
+        "name": "apple",
+        "quantity": 99
+      },
+      {
+        "name": "banana",
+        "quantity": 99
+      },
+      {
+        "name": "bread",
+        "quantity": 99
+      },
+      {
+        "name": "beer",
+        "quantity": 99
+      },
+      {
+        "name": "chocolate",
+        "quantity": 99
+      },
+      {
+        "name": "cream",
+        "quantity": 99
+      },
+      {
+        "name": "deluxe_dessert_for_2",
+        "quantity": 99
+      },
+      {
+        "name": "deluxe_meal_for_2",
+        "quantity": 99
+      },
+      {
+        "name": "microwave_curry",
+        "quantity": 99
+      },
+      {
+        "name": "milk",
+        "quantity": 99
+      },
+      {
+        "name": "strawberries",
+        "quantity": 99
+      },
+      {
+        "name": "sweets",
+        "quantity": 99
+      },
+      {
+        "name": "wine",
+        "quantity": 99
+      }
+    ],
+    "receipt": "TYPE_DESCENDING"
+  }
+]

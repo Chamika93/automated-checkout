@@ -1,5 +1,4 @@
 const compareFn = (field1, field2, ascending) => (a, b) => {
-    console.log(a.name);
     if (a[field1][field2] < b[field1][field2]) {
         return ascending ? -1 : 1;
     }
