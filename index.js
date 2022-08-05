@@ -1,21 +1,10 @@
 const { getNumOfDealsEligible, getProductDeal }  = require('./helpers/dealHelpers');
-const { getProductPrice, getProduct } = require('./helpers/productHelpers');
+const { getProduct } = require('./helpers/productHelpers');
+const { orderCompareFn } = require('./helpers/sortingHelper');
 
 const products = require('./products.json');
 const deals = require('./deals.json');
 const order = require('./order.json');
-
-// do the ordering
-const compareFn = (field, ascending) => (a, b) => {
-    console.log(a.name);
-    if (a[field] < b[field]) {
-        return ascending ? -1 : 1;
-    }
-    if (a[field] > b[field]) {
-        return ascending ? 1 : -1;
-    }
-    return 0;
-}
 
 
 const modifiedOrder = order.map(orderItem => {
@@ -24,15 +13,12 @@ const modifiedOrder = order.map(orderItem => {
     return {...orderItem, deal, product  }
 })
 
-console.log(modifyOrder);
+modifiedOrder.sort(orderCompareFn['DEAL_DESCENDING'])
 
-// console.log(order.sort(compareFn('ty', false)));
+const orderPrices = modifiedOrder.map(({quantity: orderQuantity, deal, product})=> {
 
-const orderPrices = order.map(({name: orderItem, quantity: orderQuantity})=> {
+    const productPrice =  product.price;
 
-    const productPrice =  getProductPrice(products, orderItem);
-
-    const deal = getProductDeal(deals, orderItem);
     const numOfDealsEligible = deal && getNumOfDealsEligible(products, deal, order);
     
     if(Boolean(numOfDealsEligible)) {
@@ -45,7 +31,11 @@ const orderPrices = order.map(({name: orderItem, quantity: orderQuantity})=> {
     return productPrice * orderQuantity;
 });
 
-console.log(orderPrices);
+console.log('------------- Your Receipt --------------')
+for (let i = 0; i < order.length; i++) {
+    console.log(`${order[i].name}           £${orderPrices[i]}`)
+}
+
 
 
 
